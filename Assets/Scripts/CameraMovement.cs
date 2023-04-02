@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float cameraSpeed;
-    // Update is called once per frame
+    public float cameraSpeed = 5;
     void Update()
     {
         transform.position += new Vector3(cameraSpeed * Time.deltaTime, 0, 0);

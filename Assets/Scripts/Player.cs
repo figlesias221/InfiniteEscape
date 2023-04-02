@@ -6,13 +6,4 @@ public class Player : MonoBehaviour
 {
     public float speed = 5;
     public Vector3 direction;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }

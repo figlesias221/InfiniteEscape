@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
         player = GetComponentInChildren<Player>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         float directionY = Input.GetAxisRaw("Vertical");

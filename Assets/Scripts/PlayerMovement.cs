@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Player player;
+    private Rigidbody2D rigidBody2D;
+
     void Start()
     {
         player = GetComponentInChildren<Player>();
+        rigidBody2D = GetComponent<Rigidbody2D>();
     }
 
     void Update()

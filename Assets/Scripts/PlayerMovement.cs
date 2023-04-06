@@ -31,8 +31,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        transform.position += player.direction * player.speed * Time.deltaTime;
-    }
+void FixedUpdate()
+{
+    Vector3 currentPosition = transform.position;
+    currentPosition += player.direction * player.speed * Time.deltaTime;
+    currentPosition.y = Mathf.Clamp(currentPosition.y, -4.5f, 4.4f);
+    transform.position = currentPosition;
+}
+
+    
 }

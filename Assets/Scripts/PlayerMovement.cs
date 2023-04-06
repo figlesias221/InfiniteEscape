@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
                 CircleCollider obstacleCollider = obstacle.GetComponent<CircleCollider>();
                 if (obstacleCollider.CheckCollision(transform.position, playerCollider.radius))
                 {
-                    Debug.Log("Collision!");
+                    Destroy(player.gameObject);
                 }
             }
         }

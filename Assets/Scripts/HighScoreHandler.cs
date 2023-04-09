@@ -4,29 +4,61 @@ using UnityEngine;
 
 public class HighScoreHandler : MonoBehaviour
 {
-    int highScore;
+    List<HighScoreElement> highScoreElements = new();
+    [SerializeField] int maxCount;
+    [SerializeField] string fileName;
+
+    public delegate void OnHighScoreChange(List<HighScoreElement> list);
+    public static event OnHighScoreChange onHighScoreChange;
 
     private void Start()
     {
-        SetLatestHighScore();
+        LoadHighScores();
     }
 
-    private void SetLatestHighScore()
+    private void LoadHighScores()
     {
-        highScore = PlayerPrefs.GetInt("HighScore", 0);
-    }
+        highScoreElements = FileHandler.ReadListFromJSON<HighScoreElement>(fileName);
 
-    private void SaveHighScore(int score)
-    {
-        PlayerPrefs.SetInt("HighScore", score);
-    }
-
-    public void SetHighScoreIfGreater(int score)
-    {
-        if(score > highScore)
+        while(highScoreElements.Count > maxCount)
         {
-            highScore = score;
-            SaveHighScore(score);
+            highScoreElements.RemoveAt(maxCount);
         }
+
+        if(onHighScoreChange != null)
+        {
+            onHighScoreChange.Invoke(highScoreElements);
+        }
+    }
+
+    private void SaveHighScores()
+    {
+        FileHandler.SaveToJSON(highScoreElements, fileName);
+    }
+
+    public void AddHighScoreIfPossible(HighScoreElement element)
+    {
+        for (int i = 0; i < maxCount; i++)
+        {
+            if(i >= highScoreElements.Count || element.score > highScoreElements[i].score)
+            {
+                highScoreElements.Insert(i, element);
+
+                while(highScoreElements.Count > maxCount)
+                {
+                    highScoreElements.RemoveAt(maxCount);
+                }
+
+                SaveHighScores();
+
+                if (onHighScoreChange != null)
+                {
+                    onHighScoreChange.Invoke(highScoreElements);
+                }
+
+                break;
+            }
+        }
+
     }
 }

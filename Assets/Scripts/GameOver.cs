@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject gameOverPanel;
+    [SerializeField] ScoreManager scoreManager;
+    [SerializeField] HighScoreHandler highScoreHandler;
+
     // Update is called once per frame
     void Update()
     {
@@ -13,6 +16,7 @@ public class GameOver : MonoBehaviour
         {
             Debug.Log("Game Over");
             gameOverPanel.SetActive(true);
+            highScoreHandler.SetHighScoreIfGreater(scoreManager.Points);
         }
     }
 

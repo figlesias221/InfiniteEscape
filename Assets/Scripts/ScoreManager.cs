@@ -7,7 +7,15 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
-    private float score = 0;
+    [SerializeField] float score = 0;
+
+    public int Points
+    {
+        get
+        {
+            return Mathf.RoundToInt(score);
+        }
+    }
 
     void Update()
     {

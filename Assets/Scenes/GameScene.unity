@@ -405,9 +405,6 @@ MonoBehaviour:
   panel: {fileID: 1822960036}
   highScoreUIEntryPrefab: {fileID: 2002656329897939774, guid: 39f09cbf42d0af249861816c409c4e27, type: 3}
   elementWrapper: {fileID: 1787932254}
-  highScoreHandler: {fileID: 947841984}
-  playerName: Federico
-  scoreManager: {fileID: 159998625}
 --- !u!1 &285380564
 GameObject:
   m_ObjectHideFlags: 0
@@ -2686,7 +2683,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Restart
+  m_text: 'Close
 
 '
   m_isRightToLeft: 0

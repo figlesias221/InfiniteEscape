@@ -25,4 +25,10 @@ public class GameOver : MonoBehaviour
         highScoreHandler.AddHighScoreIfPossible(new HighScoreElement(playerName, scoreManager.Points));
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void Quit()
+    {
+        gameOverPanel.SetActive(false);
+        SceneManager.LoadScene("StartScene");
+    }
 }

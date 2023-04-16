@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class LoopingBackground : MonoBehaviour
 {
-    public float backgroundSpeed;
+    public float backgroundSpeed = 0.5f;
     public Renderer backgroundRenderer;
 
-    private void Update()
+    void Update()
     {
-        backgroundSpeed = SpeedValues.BackgroundSpeed;
         backgroundRenderer.material.mainTextureOffset += new Vector2(backgroundSpeed * Time.deltaTime, 0f);
     }
 }

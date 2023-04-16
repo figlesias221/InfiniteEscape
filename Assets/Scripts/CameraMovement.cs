@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    public float cameraSpeed;
-
-    private void Update()
+    public float cameraSpeed = 5;
+    void Update()
     {
-        cameraSpeed = SpeedValues.CameraSpeed;
         transform.position += new Vector3(cameraSpeed * Time.deltaTime, 0, 0);
     }
 }

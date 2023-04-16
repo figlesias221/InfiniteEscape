@@ -21,7 +21,7 @@ public class ScoreManager : MonoBehaviour
     {
         if(GameObject.FindGameObjectsWithTag("Player").Length > 0)
         {
-            score += (Time.deltaTime + SpeedValues.ScoreSpeed);
+            score += Time.deltaTime;
             scoreText.text = "Score: " + Mathf.RoundToInt(score);
         }
         

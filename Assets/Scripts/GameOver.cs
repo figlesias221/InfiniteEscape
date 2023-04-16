@@ -14,6 +14,7 @@ public class GameOver : MonoBehaviour
     void Start()
     {
         this.gameOver = false;
+        playerName = PlayerName.Name;
     }
 
     // Update is called once per frame

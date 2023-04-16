@@ -14,7 +14,6 @@ public class GameOver : MonoBehaviour
     void Start()
     {
         this.gameOver = false;
-        playerName = PlayerName.Name;
     }
 
     // Update is called once per frame
@@ -24,10 +23,19 @@ public class GameOver : MonoBehaviour
         {
             if (GameObject.FindGameObjectsWithTag("Player").Length == 0)
             {
+                if (PlayerName.Name == "" || PlayerName.Name == null)
+                {
+                    playerName = "player1";
+                }
+                else
+                {
+                    playerName = PlayerName.Name;
+                }
+                Debug.Log(playerName);
+                Debug.Log(PlayerName.Name);
                 highScoreHandler.AddHighScoreIfPossible(new HighScoreElement(playerName, scoreManager.Points));
                 gameOverPanel.SetActive(true);
                 gameOver = true;
-                Debug.Log(gameOver);
             }
         }
     }

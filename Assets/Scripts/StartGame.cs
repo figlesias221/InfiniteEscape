@@ -11,8 +11,8 @@ public class StartGame : MonoBehaviour
     public void OnClickStart()
     {
         Debug.Log("Start Game");
-        if(playerName == "") playerName = "player1";
         PlayerName.Name = playerName;
+        Debug.Log(PlayerName.Name);
         SceneManager.LoadScene("GameScene");
         welcomePanel.SetActive(false);
     }

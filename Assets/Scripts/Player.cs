@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 5;
+    public float speed;
     public Vector3 direction;
+
+    private void Update()
+    {
+        speed = SpeedValues.PlayerSpeed;
+    }
 }

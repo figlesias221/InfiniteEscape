@@ -8,7 +8,6 @@ public class SpeedManager : MonoBehaviour
     private float minSpeed = 5f;
     private float currentSpeed;
 
-    // Start is called before the first frame update
     void Start()
     {
         StartingSpeed();
@@ -19,7 +18,7 @@ public class SpeedManager : MonoBehaviour
         SpeedValues.PlayerSpeed = 5f;
         SpeedValues.CameraSpeed = 5f;
         SpeedValues.BackgroundSpeed = 0.5f;
-        SpeedValues.ScoreSpeed = 0.0001f;
+        SpeedValues.ScoreSpeed = 0.001f;
         currentSpeed = 5f;
     }
 
@@ -41,7 +40,7 @@ public class SpeedManager : MonoBehaviour
             SpeedValues.PlayerSpeed += 0.5f;
             SpeedValues.CameraSpeed += 0.5f;
             SpeedValues.BackgroundSpeed += 0.1f;
-            SpeedValues.ScoreSpeed += 0.0001f;
+            SpeedValues.ScoreSpeed += 0.001f;
             currentSpeed += 0.5f;
         }
     }
@@ -53,7 +52,7 @@ public class SpeedManager : MonoBehaviour
             SpeedValues.PlayerSpeed -= 0.5f;
             SpeedValues.CameraSpeed -= 0.5f;
             SpeedValues.BackgroundSpeed -= 0.1f;
-            SpeedValues.ScoreSpeed -= 0.0001f;
+            SpeedValues.ScoreSpeed -= 0.001f;
             currentSpeed -= 0.5f;
         }
     }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8368202121416137246
+--- !u!1 &2054349192795277816
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,64 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8368202121416137245}
-  - component: {fileID: 6265376361811094773}
-  - component: {fileID: 5036088517516288270}
-  - component: {fileID: 8590972848693445417}
+  - component: {fileID: 6080793167416741703}
+  - component: {fileID: 1218488542644148403}
+  - component: {fileID: -2613062925558184488}
+  - component: {fileID: -279559887274367280}
   m_Layer: 0
-  m_Name: Obstacle
+  m_Name: Triangle
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8368202121416137245
+--- !u!4 &6080793167416741703
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8368202121416137246}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.78, z: 0.018728102}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.59341}
+  m_GameObject: {fileID: 2054349192795277816}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 0.001868, y: 0, z: 0}
+  m_LocalScale: {x: 1.0088, y: 1.0088, z: 1.0088}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6265376361811094773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8368202121416137246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3daf35d8e12c24b90997b24286f663e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 0.62
---- !u!114 &5036088517516288270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8368202121416137246}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 959c09f7324836e4293fde53edd029d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &8590972848693445417
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!212 &1218488542644148403
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8368202121416137246}
+  m_GameObject: {fileID: 2054349192795277816}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -100,14 +75,41 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6a5706887edfa44c78ee6d68ac82ecd9, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 1633d29359c3f4030ad0cf96a481dccb, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 7.93, y: 7.08}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-2613062925558184488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054349192795277816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959c09f7324836e4293fde53edd029d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-279559887274367280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054349192795277816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec178472da9447e4b0ea6c4ca721597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vertex1: {x: 0.3, y: -0.6}
+  vertex2: {x: 0.3, y: 0.5}
+  vertex3: {x: -0.5, y: 0}

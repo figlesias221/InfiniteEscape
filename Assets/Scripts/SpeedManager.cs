@@ -38,7 +38,6 @@ public class SpeedManager : MonoBehaviour
     {
         if (currentSpeed < maxSpeed)
         {
-            Debug.Log(SpeedValues.PlayerSpeed);
             SpeedValues.PlayerSpeed += 0.5f;
             SpeedValues.CameraSpeed += 0.5f;
             SpeedValues.BackgroundSpeed += 0.1f;
@@ -56,7 +55,6 @@ public class SpeedManager : MonoBehaviour
             SpeedValues.BackgroundSpeed -= 0.1f;
             SpeedValues.ScoreSpeed -= 0.0001f;
             currentSpeed -= 0.5f;
-            Debug.Log(SpeedValues.PlayerSpeed);
         }
     }
 }

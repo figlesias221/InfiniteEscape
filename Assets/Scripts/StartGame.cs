@@ -10,9 +10,7 @@ public class StartGame : MonoBehaviour
     // script to start the game when the player clicks the start button
     public void OnClickStart()
     {
-        Debug.Log("Start Game");
         PlayerName.Name = playerName;
-        Debug.Log(PlayerName.Name);
         SceneManager.LoadScene("GameScene");
         welcomePanel.SetActive(false);
     }

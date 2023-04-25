@@ -12,5 +12,11 @@ public class CircleCollider : MonoBehaviour
         float distance = Vector2.Distance(circlePos, centerPos);
         return distance <= radius + circleRadius;
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, radius);
+    }
 }
 
